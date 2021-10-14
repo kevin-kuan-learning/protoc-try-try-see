@@ -3,9 +3,9 @@ syntax = "proto2";
 package tutorial;    // This is normally determined by directory structure in Python
 
 message Person {
-    optional string name = 1;
-    optional int32 id = 2;
-    optional string email = 3;
+    optional string name = 1; // default ""
+    optional int32 id = 2; // default 0
+    optional string email = 3; // default ""
 
     enum PhoneType {
         MOBILE = 0;
@@ -14,7 +14,7 @@ message Person {
     }
 
     message PhoneNumber {
-        optional string number = 1;
+        optional string number = 1;  // default ""
         optional PhoneType type = 2 [default = HOME];
     }
 
