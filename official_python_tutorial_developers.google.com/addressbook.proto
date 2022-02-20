@@ -19,6 +19,8 @@ message Person {
     }
 
     repeated PhoneNumber phones = 4;
+
+    optional int64 i64 = 5;
 }
 
 message AddressBook {

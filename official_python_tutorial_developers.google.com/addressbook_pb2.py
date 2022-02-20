@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11\x61\x64\x64ressbook.proto\x12\x08tutorial\"\xdb\x01\n\x06Person\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\x05\x12\r\n\x05\x65mail\x18\x03 \x01(\t\x12,\n\x06phones\x18\x04 \x03(\x0b\x32\x1c.tutorial.Person.PhoneNumber\x1aM\n\x0bPhoneNumber\x12\x0e\n\x06number\x18\x01 \x01(\t\x12.\n\x04type\x18\x02 \x01(\x0e\x32\x1a.tutorial.Person.PhoneType:\x04HOME\"+\n\tPhoneType\x12\n\n\x06MOBILE\x10\x00\x12\x08\n\x04HOME\x10\x01\x12\x08\n\x04WORK\x10\x02\"/\n\x0b\x41\x64\x64ressBook\x12 \n\x06people\x18\x01 \x03(\x0b\x32\x10.tutorial.Person'
+  serialized_pb=b'\n\x11\x61\x64\x64ressbook.proto\x12\x08tutorial\"\xe8\x01\n\x06Person\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\x05\x12\r\n\x05\x65mail\x18\x03 \x01(\t\x12,\n\x06phones\x18\x04 \x03(\x0b\x32\x1c.tutorial.Person.PhoneNumber\x12\x0b\n\x03i64\x18\x05 \x01(\x03\x1aM\n\x0bPhoneNumber\x12\x0e\n\x06number\x18\x01 \x01(\t\x12.\n\x04type\x18\x02 \x01(\x0e\x32\x1a.tutorial.Person.PhoneType:\x04HOME\"+\n\tPhoneType\x12\n\n\x06MOBILE\x10\x00\x12\x08\n\x04HOME\x10\x01\x12\x08\n\x04WORK\x10\x02\"/\n\x0b\x41\x64\x64ressBook\x12 \n\x06people\x18\x01 \x03(\x0b\x32\x10.tutorial.Person'
 )
 
 
@@ -49,8 +49,8 @@ _PERSON_PHONETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=208,
-  serialized_end=251,
+  serialized_start=221,
+  serialized_end=264,
 )
 _sym_db.RegisterEnumDescriptor(_PERSON_PHONETYPE)
 
@@ -89,8 +89,8 @@ _PERSON_PHONENUMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=129,
-  serialized_end=206,
+  serialized_start=142,
+  serialized_end=219,
 )
 
 _PERSON = _descriptor.Descriptor(
@@ -129,6 +129,13 @@ _PERSON = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='i64', full_name='tutorial.Person.i64', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -143,7 +150,7 @@ _PERSON = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=32,
-  serialized_end=251,
+  serialized_end=264,
 )
 
 
@@ -174,8 +181,8 @@ _ADDRESSBOOK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=300,
+  serialized_start=266,
+  serialized_end=313,
 )
 
 _PERSON_PHONENUMBER.fields_by_name['type'].enum_type = _PERSON_PHONETYPE

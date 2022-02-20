@@ -1,10 +1,10 @@
-from google.protobuf.json_format import MessageToDict
+from google.protobuf.json_format import MessageToDict, MessageToJson
 import addressbook_pb2
 
 RUNERROR = False
 
 person = addressbook_pb2.Person()
-person.id = 34173
+person.i64 =  - 1
 if RUNERROR:
     person.id = "34173" # TypeError
     person.address = "YuanTong Rd."  # AttributeError
@@ -45,14 +45,14 @@ print(binary_string)
 # b'\n\nKevin Kuan\x10\xfd\x8a\x02\x1a\x19kevin_kuan@trendmicro.com"\x0e\n\n0919487522\x10\x00'
 print(type(binary_string))  #binary string indeed
 
-with open('test', 'wb') as f:
+with open('test.pb', 'wb') as f:
     f.write(binary_string)
 
-with open('test', 'rb') as f:
+with open('test.pb', 'rb') as f:
     s = f.read()
 
 person.ParseFromString(s)  # returns bytes parsed, 59.
 j = MessageToJson(person)
 
-
+print(person)
 pass
